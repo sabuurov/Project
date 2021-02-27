@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-
+  // @Input('blog') type: string;
   blog = 'Some text';
   constructor() { }
 

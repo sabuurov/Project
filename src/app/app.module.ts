@@ -10,6 +10,10 @@ import { ContentComponent } from './content/content.component';
 import { NewsComponent } from './content/news/news.component';
 import { CategoriesComponent } from './content/categories/categories.component';
 import { BlogComponent } from './content/blog/blog.component';
+import { PagesComponent } from './pages/pages.component';
+import { SportComponent } from './pages/sport/sport.component';
+import { CultureComponent } from './pages/culture/culture.component';
+import { PoliticsComponent } from './pages/politics/politics.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { BlogComponent } from './content/blog/blog.component';
     ContentComponent,
     NewsComponent,
     CategoriesComponent,
-    BlogComponent
+    BlogComponent,
+    PagesComponent,
+    SportComponent,
+    CultureComponent,
+    PoliticsComponent
   ],
   imports: [
     FormsModule,
