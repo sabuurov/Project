@@ -2,13 +2,15 @@
 <div>
   <label for="name">Please, enter your name: </label>
   <input type="text" name="name" id="name" [(ngModel)]="name"/>
-  <h2 align="center">Welcome, {{name}} !</h2>
+  <h2 align="center">Welcome, {{name | uppercase}} !</h2>
 </div>
 
-    <div>
+    <div [ngStyle]="{
+    'font-size': '14px',
+    'font-family': 'Arial Black'
+    }">
       {{blog}}
     </div>
-
 <app-categories></app-categories>
 <router-outlet></router-outlet>
 <app-news></app-news>

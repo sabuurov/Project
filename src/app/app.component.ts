@@ -12,6 +12,7 @@ export class AppComponent {
 
   title = 'Project';
   name = 'User';
+  num: number = 0;
   @ViewChild(BlogComponent)
   child!: BlogComponent;
   blog = 'Some text';

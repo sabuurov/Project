@@ -2,7 +2,7 @@
 
   <div class="header-limiter">
 
-    <h1><a href="#">Individual<span>Project</span></a></h1>
+    <h1><a href="#"><span>{{title | titlecase}}</span></a></h1>
 
     <nav>
       <a href="#">Home</a>
@@ -11,10 +11,28 @@
       <a href="#">Contact</a>
     </nav>
 
+    <div class="date">
+      <label>Choose a date type:</label>
+      <select #select [(ngModel)]="choice">
+          <option value="Formatted">Formatted</option>
+          <option value="Unformatted">Unformatted</option>
+      </select>
+      <div [ngSwitch]="choice">
+        <p *ngSwitchCase="'Formatted'">{{toDate |  date:'dd-MM-yy HH:mm'}}</p>
+        <p *ngSwitchCase="'Unformatted'"> {{toDate}}</p>
+      </div>
+
+      <p>T: <input type="text"
+                        [(ngModel)]="tenge"/>
+        $: {{ tenge | currConverter:'T'}} </p>
+      <p>$: <input type="text" [(ngModel)]="dollar"/>
+        T : {{ dollar | currConverter:'$'}}
+      </p>
     <form method="get" action="#">
       <input type="search" placeholder="Search!" name="search">
     </form>
 
+  </div>
   </div>
 
 </header>

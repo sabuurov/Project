@@ -14,6 +14,9 @@ import { PagesComponent } from './pages/pages.component';
 import { SportComponent } from './pages/sport/sport.component';
 import { CultureComponent } from './pages/culture/culture.component';
 import { PoliticsComponent } from './pages/politics/politics.component';
+// import { PipesComponent } from './pipes/pipes.component';
+import {CurrConverterPipe} from './pipes/curr-converter.pipe';
+import { NewComponentDirectiveComponent } from './new-component-directive/new-component-directive.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { PoliticsComponent } from './pages/politics/politics.component';
     PagesComponent,
     SportComponent,
     CultureComponent,
-    PoliticsComponent
+    PoliticsComponent,
+    // PipesComponent,
+    CurrConverterPipe,
+    NewComponentDirectiveComponent
   ],
   imports: [
     FormsModule,

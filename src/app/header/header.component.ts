@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  toDate: Date = new Date();
+  title = 'Individual project';
+  dollar!: number;
+  tenge!: number;
+  choice = 'Formatted';
   constructor() { }
-
   ngOnInit(): void {
   }
 
