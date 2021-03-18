@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Output, EventEmitter, OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -6,11 +6,17 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent {
   // @Input('blog') type: string;
-  blog = 'Some text';
+  // blog = 'Some text';
+  // constructor() { }
+  currentBlog = '';
+  blog = [];
   constructor() { }
-
-  ngOnInit(): void {
-  }
+  // tslint:disable-next-line:typedef
+  toContent() { // @ts-ignore
+    this.blog.push(this.currentBlog); }
+  //
+  // ngOnInit(): void {
+  // }
 }

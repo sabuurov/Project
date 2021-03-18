@@ -2,6 +2,7 @@
 <div>
   <form>
     <label>Please, write your notes here: </label>
-    <textarea type="text" [(ngModel)]="blog"></textarea>
+    <textarea type="text" [(ngModel)]="currentBlog"></textarea>
+    <button (click)="toContent()">Send</button>
   </form>
 </div>
