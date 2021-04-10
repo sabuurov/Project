@@ -11,12 +11,15 @@ import { PagesComponent } from './pages/pages.component';
 import { SportComponent } from './pages/sport/sport.component';
 import { CultureComponent } from './pages/culture/culture.component';
 import { PoliticsComponent } from './pages/politics/politics.component';
+import {BlogGuardService} from './guardservices/blog-guard-service.service';
 
 const routes: Routes = [
   { path: 'sport', component: SportComponent },
   { path: 'politics', component: PoliticsComponent},
   { path: 'culture', component: CultureComponent },
-  { path: 'blog', component: BlogComponent }
+  { path: 'blog', component: BlogComponent,
+  canDeactivate: [BlogGuardService]
+  }
 ];
 
 @NgModule({

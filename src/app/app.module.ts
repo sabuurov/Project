@@ -17,6 +17,7 @@ import { PoliticsComponent } from './pages/politics/politics.component';
 // import { PipesComponent } from './pipes/pipes.component';
 import {CurrConverterPipe} from './pipes/curr-converter.pipe';
 import { NewComponentDirectiveComponent } from './new-component-directive/new-component-directive.component';
+import {BlogGuardService} from './guardservices/blog-guard-service.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { NewComponentDirectiveComponent } from './new-component-directive/new-co
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [BlogGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
