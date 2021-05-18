@@ -12,6 +12,7 @@ import { SportComponent } from './pages/sport/sport.component';
 import { CultureComponent } from './pages/culture/culture.component';
 import { PoliticsComponent } from './pages/politics/politics.component';
 import {BlogGuardService} from './guardservices/blog-guard-service.service';
+// import {FormComponent} from './forms/form.component';
 
 const routes: Routes = [
   { path: 'sport', component: SportComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'culture', component: CultureComponent },
   { path: 'blog', component: BlogComponent,
   canDeactivate: [BlogGuardService]
-  }
+  },
+  // {path: 'form', component: FormComponent}
 ];
 
 @NgModule({
